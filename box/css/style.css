@@ -1,0 +1,817 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Basic styles */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,500,300italic,500italic,700italic,900,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+@font-face {
+  font-family: 'quicksandregular';
+    src: url('../fonts/quicksand-regular-webfont.woff2') format('woff2'),
+         url('../fonts/quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.roboto {
+    font-family: "Roboto";
+}
+.roboto-c {
+    font-family: "Roboto Condensed";
+}
+
+html,body {
+	min-height:100%;
+    margin: 0px;
+}
+.container-fluid{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.content-block{
+    align-items:center;
+    -webkit-align-items:center;
+    height:auto;
+    min-height:100vh;
+/*    padding-bottom:50px*/
+}
+input, textarea, video, label, form{
+    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+}
+.nice_input .input-container label{
+    font-family: "Roboto";
+    font-weight: 300;
+    line-height: 48px;
+}
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
+
+.navbar li { color: #000 } 
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  width: auto;
+}
+
+.bignav .navbar-brand {
+  height: 200px;
+    /*padding-left: 100px;*/
+}
+
+.bignav .nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.bignav .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+
+
+/*-------- Taken from material design -------*/
+h1 {
+    font-family: "quicksandregular";
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1.35;
+    /* letter-spacing: -0.02em; */
+   /* margin-top: 80px;
+    margin-bottom: 60px;*/
+}
+
+h2 {
+    font-family: "quicksandregular";
+    /*font-size: 32px;*/
+    font-weight: 400;
+    line-height: 48px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+h3{
+    font-family: "quicksandregular";
+    font-weight: 400;
+    line-height: 48px;
+}
+
+h4 {
+    font-family: "quicksandregular";
+    /*font-size: 24px;*/
+    font-weight: 400;
+    line-height: 32px;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}  
+h5 {
+    font-family: "quicksandregular";
+    padding: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+/*.mdl-shadow--4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.mdl-card {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 400;
+    min-height: 200px;
+    overflow: hidden;
+    width: 330px;
+    z-index: 1;
+    position: relative;
+    background: rgb(255,255,255);
+    border-radius: 2px;
+    box-sizing: border-box;
+}*/
+
+p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+}
+
+
+/*-------- Taken from material design -------*/
+
+.special,.special .jumbotron {
+	height:100%;
+	padding:inherit;
+    margin: 0px;
+}
+
+#intro{
+    background: url('../images/banner_bg.jpg') no-repeat left top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    color:#fff;
+    background-color:#333;
+    font-family: roboto;
+    margin-top: 0px;
+}
+
+
+
+#intro .btn-default {
+  color: #fff;
+  background-color: #00A8EF;
+}
+
+.nice_input {
+  position: relative;
+  max-width: 460px;
+  width: 100%;
+  /*margin: 0 auto 0;*/
+  margin: auto;
+}
+
+
+ #features .card-title{
+     display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-around; /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-around;
+}
+    #features{
+        background-color: #ecf0f1;
+        padding: 15px;
+        /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    }
+    .card-img-top{
+        margin: 0 auto 0 auto;
+        padding: 0px;
+/*        opacity:0.5 ;*/
+    }
+#features .card{
+        min-height: 350px;
+    }
+
+#features .card ul li {
+    /* list-style: none; */
+    font-family: "Roboto";
+    /* margin-bottom: 5px; */
+    font-size: 21px;
+    font-weight: 200;
+}
+
+#features .card .fa-inverse {
+    color: #00A8EF;
+}
+
+
+    #features .card-title{
+        text-align: center;
+        font-weight: bold;
+/*        padding: 20px;*/
+        opacity: 1;
+    }
+ #features .card .img-responsive{
+        height: 50px;
+    }
+#features .btn{
+    margin: auto;
+    float: none;
+}
+    #features h4{
+        color:#00A8EF;
+    }
+#box-button-page{
+    height: 40%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: rgb(255, 255, 255);
+    background-image:url(../images/box_banner_mini.jpg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+#box-button-page .text-left{
+    margin-left: 0px;
+    padding: 0px;
+}
+#box-button-page .btn-default{
+    margin-left: 0px;
+    padding: 20px;
+  /*font-size: 24px;*/
+  font-weight: 400;
+  line-height: 1;
+}
+    #packages{
+        background-color:#fff;
+    }
+    #page5 h2{
+        text-align: center;
+        font-size:  2.0625rem;
+    }
+
+    #sample4{
+        font-size: 40px;
+    }
+    .visitor{
+        margin: 0 auto;
+        align-content: center;
+    }
+
+    .huge{
+        color: blue;
+        font-family: noto;
+        font-size: 100%;
+    }
+
+
+    .vcontainer {
+       width: cal(50%-30px);
+   }
+   #dynamicheight
+   {
+/*    width: 50%;*/
+    
+    /* Just for looks: */
+    margin: 0px;
+}
+iframe{
+    border: 0px;
+}
+
+#dynamicheight iframe{
+    width: 100%;
+    height: 100%;
+    
+}
+/*-----   Works for fullscreen  -----*/
+.auto-resizable-iframe {
+  max-width: 420px;
+  margin: 0px auto;
+}
+
+.auto-resizable-iframe > div {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0px;
+}
+
+.auto-resizable-iframe iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*   ---------  */
+
+.vcenter {
+    margin-top: 10%;
+    display:inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.cards{
+    margin: auto;
+}
+.cards .mdl-card{
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    text-align: center;
+}
+.card .recommended{
+    /*    background-color: #3fb87f;*/
+    margin: 0px;
+    text-transform: uppercase;
+    color: #3fb87f;
+    font-size: 1 rem;
+    margin-bottom: .375rem;
+    padding-left: .125rem;
+    font-weight: bold;
+    text-align: center;
+    /* margin-left: -.75rem;
+    margin-right: -.75rem;
+    padding: .3125rem .75rem; */
+}
+.cards ul{ 
+    padding: 0px;
+}
+.cards ul li{
+    list-style: none; 
+    padding: 0px;
+    margin: 0px;
+}
+
+/* .card{
+    padding: 0px;
+}
+.card-header{
+    background-color:#3fb87f;
+}
+*/
+body .modal {
+    /* new custom width */
+    width: auto;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    
+}
+
+/*#order form{
+    background: url(../images/email-icon-lg.png) no-repeat center center;
+    padding: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}*/
+
+.gray-divider {
+    width: 100%;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+#CardBlock{
+    background-image: url(../images/packageBG.jpg);
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.right-bordered{
+    padding-right:20px; 
+    border-right: 1px solid #fff;
+    border-collapse: collapse;
+}
+.vdivider{
+    height:200px; 
+    width:0px; 
+    vertical-align: top;
+    position:relative; 
+    border-left:1px solid white;
+}
+#CardBlock ul li{
+    list-style: none;
+    font-family:"Roboto";
+    margin-bottom: 5px;
+    font-size: 21px;
+    font-weight: 200;
+}
+#packages .card .card-block{
+    text-align: center;
+}
+#packages .btn{
+    margin: auto;
+    float: none;
+}
+#packages .img-reponsive{
+    margin: auto;
+}
+#references{
+/*    padding-top: 5%;*/
+    padding-bottom: 0;
+    margin-bottom: 0px;
+}
+/*#references .row img{
+    padding-right: 0px;
+    width: 20px;
+}*/
+#references .card{
+    padding: 15px;
+    margin: 20px;
+}
+
+#references .ref-images li{
+    padding: 15px;
+    margin: 20px;
+    width: 15%;
+}
+#references .ref-images li img{
+    margin: auto;
+    float: none;
+    max-height: 50px;
+    max-width: 100%;
+    vertical-align: middle;
+}
+#references .gray-area{
+    padding: 15px;
+}
+
+#references .card img{
+/*    min-width: 200px;*/
+    width: 100%;
+}
+#references .card{
+    width: 200px;
+/*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+div.polaroid {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+  
+.grayscale {
+  -webkit-filter: brightness(1.10) grayscale(100%) contrast(90%);
+  -moz-filter: brightness(1.10) grayscale(100%) contrast(90%);
+  filter: brightness(1.10) grayscale(100%); 
+}
+
+#equalheight {
+    overflow: hidden; 
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.row .vdivide [class*='col-']:not(:last-child):after {
+  background: #fff;
+  width: 6px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
+}
+.modal-dialog{
+    background-color: white;
+}
+
+.wrapper {
+	width: 1440px;
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+
+.rcorners1 {
+    border-radius: 200px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    alignment-adjust: middle;
+    vertical-align:middle;
+    font-size:160px;
+}
+
+.rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #fff;
+    padding: 20px;
+}
+
+/************ footer **************/
+
+
+/*#before-footer{height: 20%;}*/
+footer{
+    font-family: "quicksandregular";
+    margin-bottom: 0px;
+    /*background-color: #ecf0f1;*/
+    background-color: #f8f8f8;
+    /*display: none;*/
+}
+/*footer .navbar-default{
+    background-color: #ecf0f1;
+}*/
+footer .copy-right{
+    padding-bottom: 3px;
+    margin-bottom: 0px;
+}
+
+
+footer ul li{
+    list-style: none;
+}
+footer .footer-navigation li{
+    display: inline-block;
+    text-align: center;
+    padding: 0 15px;
+}
+
+footer .logo img{
+    width: 100px;
+    text-align: center;
+    margin: auto;
+}
+.footer-icons{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border-radius: 20px;
+    border-width: 30px;
+    padding-top: 3px;
+	font-size: 20px;
+    box-shadow: 0px 0px 2px #00A8EF;
+    color: #00A8EF;
+    background-color:transparent;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+.footer-left{
+          text-align: center;
+    /*background-color: inherit;*/
+      }
+.footer-right{
+          text-align: center;
+    /*background-color: inherit;*/
+      }
+
+.footer-left .fa{
+    color: #00A8EF;
+}
+.footer-icons a .fa{
+    color: #00A8EF;
+}
+footer .polku-logo-small{
+    position: inherit;
+    padding: 0px;
+    margin: 0px;
+   height: 80px;
+}
+
+/************./footer **************/
+/*  Another modal for full screen
+    .modal-fullscreen */
+
+.modal-fullscreen {
+  background: transparent;
+    height: auto;
+}
+.modal-fullscreen .modal-content {
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.modal-fullscreen .modal-body {
+  font-size: 2vmin;
+}
+.modal-fullscreen .modal-body .text-right{
+  text-align: left;
+}
+/*.modal-backdrop.modal-backdrop-fullscreen {
+  background: #ffffff;
+}*/
+.modal-backdrop.modal-backdrop-fullscreen.in {
+  opacity: .5;
+  filter: alpha(opacity=50);
+}
+
+/* .modal-fullscreen size: we use Bootstrap media query breakpoints */
+
+.modal-fullscreen .modal-dialog {
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+    max-width: 900px;
+  width: 100%;
+    height: auto;
+}
+
+.form-large{
+    font-size: 100%;
+}
+
+/*Desktop & Laptops*/
+@media only screen and (min-width : 1224px) {
+    #introText{
+    padding-left: 100px;
+} 
+    #references .row img{
+        padding-left: 10%;
+        width: 80%;
+    }  
+    #Säästösi{
+        padding-right: 0px;
+        margin-left: 0px;
+        text-align: right;
+    }
+    .footer-left{
+          text-align: right;
+        /*background-color: inherit;*/
+      }
+      .footer-right{
+          text-align: left;
+          /*background-color: inherit;*/
+      }
+}
+
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { 
+.bignav .navbar-brand {
+        padding-left: 0px;
+    } 
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { 
+    .bignav .navbar-brand {
+        padding-left: 6.250em;
+    } 
+    .footer-left{
+          text-align: right;
+        /*background-color: inherit;*/
+      }
+      .footer-right{
+          text-align: left;
+          /*background-color: inherit;*/
+      }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { 
+    .bignav .navbar-brand {
+        padding-left: 6.250em;
+    } 
+    .footer-left{
+          text-align: right;
+        /*background-color: inherit;*/
+      }
+      .footer-right{
+          text-align: left;
+          /*background-color: inherit;*/
+      }
+}
+
+/*media queries continued.....*/
+/*iPad in landscape*/
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    /* STYLES GO HERE */
+    #features .card{
+        min-height: 400px;
+    }
+}
+
+/*/******iPad in landscape*/
+
+/*iPad in portrait*/
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+    /* STYLES GO HERE */ 
+#features .card{
+        min-height: 400px;
+    }
+}
+/***********iPad in portrait***********/
+
+
+@media only screen
+and (min-device-width : 768px){
+    .bignav .navbar-brand {
+        padding-left: 6.250em;
+    } 
+    #intro .btn-default {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+    #box-button-page .btn-default {
+    font-size: 24px;
+}
+    .footer-left{
+          text-align: right;
+        /*background-color: inherit;*/
+      }
+      .footer-right{
+          text-align: left;
+          /*background-color: inherit;*/
+      }
+}
+
+
+@media only screen
+and (max-device-width : 768px){    
+    .nice_input .input-container label{
+        visibility: hidden;
+}
+    .bignav .navbar-brand {
+        height: 100px;
+    } 
+#introText h2 {
+    font-family: "quicksandregular";
+    font-size: 18px;
+    /* font-weight: 400; */
+    line-height: 18px;
+}
+    #references .ref-images li{
+    padding: 1%;
+}
+}
+/*---------replacing the bootstrap css */
+.btn-default {
+    margin-left: 1em;
+  font-weight: 400;
+  color: #00A8EF;
+  background-color: transparent;
+  border: 2px solid #00A8EF;/*all styles changed*/
+}
+.btn-default:focus,
+.btn-default.focus {
+  color: #fff;
+  background-color: #00A8EF;
+  border: 2px solid #00A8EF;/*all styles changed*/
+}
+.btn-default:hover {
+  color: #fff;
+  background-color: #00A8EF;
+  border: 2px solid #00A8EF;/*changed*/
+}
+
+@media screen and (min-width: 768px){
+    .jumbotron .h1, .jumbotron h1 {
+    font-size: 48px;
+}
+    
+}
+/*-------/replacing the bootstrap css */
+
+

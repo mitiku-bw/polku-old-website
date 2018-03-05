@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>Node.JS Email application</title>
+
+ <!-- Bootstrap 3.3.7 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">-->
+<!--    Fonts-->
+<!--    Font awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div id="container">
+               <div class="row col-lg-12 text-center center-block">
+                <hr class="gray-divider">
+
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-fullscreen">OSTA, KOKEILE TAI VARAA DEMO</button>
+                </div>
+<h1>Mailer In Node.JS</h1>
+
+
+
+</div>
+
+ <!-- Modal fullscreen -->
+        <div class="modal modal-fullscreen fade" id="modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog  rcorners2">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h2 class="modal-title" id="myModalLabel">Jätä yhteystietosi, niin otamme yhteyttä pian!</h2>
+              </div>
+              <div class="modal-body">
+                             <span id="message" class="success"><i></i></span>
+                              <form>
+                                <div class="form-group">
+                                    <label for="nimi">Nimi</label>
+                                    <input type="text" class="form-control" id="nimi" name="nimi" placeholder="nimi" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="yritys">Yritys</label>
+                                    <input type="text" class="form-control" id="yritys" placeholder="Yritys" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">S-Posti</label>
+                                    <input type="email" class="form-control" id="email" placeholder="S-Posti" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="puh">Puh</label>
+                                    <input type="text" class="form-control" id="puh" placeholder="Puh" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Lisenssien_määrä">Lisenssien määrä</label>
+                                    <input type="text" class="form-control" id="Lisenssien_määrä" placeholder="Lisenssien määrä" required>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="varaa_demo" checked>Varaa Demo</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="kk">1kk maksuton kokeilu</label>
+                                </div>
+                                <div class="form-group">
+                                    <label>Osta Business plus (lähetämme virallisen tarjouksen sähköpostitse)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="usassa">25&euro;/lisenssi/kk (Data USA:ssa)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="euroopassa">32&euro;/lisenssi/kk (Data Euroopassa)</label>
+                                </div>
+                                <div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Sulje</button>
+               <button id="send_email"  type="button" class="btn btn-default">Lähetä</button>
+               
+              </div>
+                            </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+  <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--        Bootstrap 3.3.7 mini JS Library CDN-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script>
+                $(document).ready(function(){
+                    if(!$("checkbox").is(':checked') ){ $(this).val('1');}
+                    else
+                        $(this).val('0');
+                    var timeStamp = Math.floor(Date.now() / 1000);
+                    var dt = new Date();
+                    var utcDate = dt.toUTCString();
+                    var from,subject,text;
+                    $("#send_email").click(function(){      
+                        from=$("#email").val();
+                        subject="Box order";
+                //        subject=$("#subject").val();
+                        text= "New order at " + utcDate + ":\n\n" + "Customer details:\n\n" + "Name:\t" + $("#nimi").val() + "\n" + "Company:\t" + $("#yritys").val() + "\n" + "Tel:\t" + $("#puh").val() + "\n" + "Email:\t" + $("#email").val() + "\n" + "\nOrder details:\n\n" + "\tVaraa Demo:\t" + $("#varaa_demo").val() + "\n" + "\t1kk maksuton kokeilu:\t" + $("#kk").val() + "\n" + "\t25&euro;/lisenssi/kk (Data USA:ssa):\t" + $("#usassa").val() + "\n" + "\t32&euro;/lisenssi/kk (Data Euroopassa):\t" + $("#euroopassa").val() + "\n";
+                        
+                        $("#message").text("Sending your orders...Please wait");
+                        $.get("/send",{from:from,subject:subject,text:text},function(data){
+                        if(data=="sent"){
+                            $("#message").empty().html("Thank you!");
+                        }
+                        });
+                    });
+                });
+                </script>
+</body>
+</html>
